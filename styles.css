@@ -1,0 +1,211 @@
+/* Reset some default styles */
+:root {
+  --background-color: #f5f8ff;
+  --highlight-background-color: #e0edff;
+  --text-color: #1e2a4a;
+  --highlight-text-color: #2563eb;
+  --accent-color: #3b82f6;
+  color: var(--text-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #1a1f2e;
+    --highlight-background-color: #242d42;
+    --text-color: #e0e8ff;
+    --highlight-text-color: #60a5fa;
+    --accent-color: #3b82f6;
+    --link-color: #93c5fd;
+  }
+}
+
+.highlight {
+  background-color: rgba(59, 130, 246, 0.2);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .highlight {
+    background-color: rgba(96, 165, 250, 0.25);
+  }
+}
+
+a {
+  color: var(--link-color, var(--accent-color));
+}
+
+a:hover {
+  color: var(--highlight-text-color);
+}
+
+body, h1, h2, h3, p {
+  margin: 0;
+  padding: 20px 0 10px;
+}
+
+/* Set a background color and font */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+}
+
+/* Header styles */
+header {
+  background-color: var(--highlight-background-color);
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 20pt;
+  color: var(--highlight-text-color);
+}
+
+header h3 {
+  padding-top: 0;
+  margin-top: 0;
+  color: var(--highlight-text-color);
+}
+
+h3 {
+  font-size: 11pt;
+
+}
+
+.container h3 {
+  color: var(--highlight-text-color);
+  padding-bottom: 0;
+}
+
+header img.logo {
+  max-width: 320px;
+  margin-bottom: 10px;
+}
+
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Main content styles */
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.intro-text h3 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+@media (max-width: 768px) {
+  .intro {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* AndBible section */
+.andbible-section {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: var(--highlight-background-color);
+  border-radius: 12px;
+}
+
+.andbible-logo {
+  width: 45px;
+  height: 45px;
+}
+
+.andbible-section h3 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* Footer styles */
+footer {
+  background-color: var(--highlight-background-color);
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  padding: 20px 10px 30px;
+}
+
+.footer-location {
+  font-size: 90%;
+  margin: 0 0 5px 0;
+  padding: 0;
+  color: var(--highlight-text-color);
+}
+
+.footer-email {
+  margin: 0 0 15px 0;
+  padding: 0;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-decoration: none;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.social-link:hover {
+  background-color: var(--accent-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.social-link svg {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-text {
+  font-size: 80%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  header img.logo {
+    max-width: 240px;
+  }
+  .container {
+    margin: 10px;
+    padding: 20px 15px;
+  }
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+  }
+}
