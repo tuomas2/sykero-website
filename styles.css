@@ -183,8 +183,12 @@ header img.logo {
 
 @media (max-width: 768px) {
   .intro {
-    flex-direction: column;
-    align-items: center;
+    gap: 16px;
+  }
+  .profile-photo {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
   }
 }
 
