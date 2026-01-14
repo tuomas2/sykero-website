@@ -294,6 +294,13 @@ footer {
 
 .footer-text {
   font-size: 80%;
+  color: var(--text-muted);
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Responsive adjustments */
