@@ -243,6 +243,12 @@ footer {
   color: var(--highlight-text-color);
 }
 
+.footer-location .flag {
+  font-size: 24px;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
 .footer-email {
   margin: 0;
   padding: 0;
