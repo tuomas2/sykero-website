@@ -230,16 +230,29 @@ footer {
   padding: 20px 10px 30px;
 }
 
+.footer-contact {
+  margin-bottom: 20px;
+}
+
 .footer-location {
-  font-size: 90%;
-  margin: 0 0 5px 0;
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0 0 8px 0;
   padding: 0;
   color: var(--highlight-text-color);
 }
 
 .footer-email {
-  margin: 0 0 15px 0;
+  margin: 0;
   padding: 0;
+}
+
+.footer-email a {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--highlight-text-color);
 }
 
 .social-links {
