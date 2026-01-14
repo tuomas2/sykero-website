@@ -1,33 +1,50 @@
 /* Reset some default styles */
 :root {
-  --background-color: #f5f8ff;
-  --highlight-background-color: #e0edff;
-  --text-color: #1e2a4a;
-  --highlight-text-color: #2563eb;
-  --accent-color: #3b82f6;
+  --background-color: #F8FAFC;
+  --highlight-background-color: #F1F5F9;
+  --text-color: #0F172A;
+  --text-muted: #475569;
+  --highlight-text-color: #0369A1;
+  --accent-color: #0369A1;
+  --cta-color: #0369A1;
+  --border-color: #E2E8F0;
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
   color: var(--text-color);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: #1a1f2e;
-    --highlight-background-color: #242d42;
-    --text-color: #e0e8ff;
-    --highlight-text-color: #60a5fa;
-    --accent-color: #3b82f6;
-    --link-color: #93c5fd;
+    --background-color: #0F172A;
+    --highlight-background-color: #1E293B;
+    --text-color: #F1F5F9;
+    --text-muted: #94A3B8;
+    --highlight-text-color: #38BDF8;
+    --accent-color: #38BDF8;
+    --cta-color: #0EA5E9;
+    --border-color: #334155;
+    --link-color: #7DD3FC;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
 .highlight {
-  background-color: rgba(59, 130, 246, 0.2);
+  background-color: rgba(3, 105, 161, 0.15);
   padding: 2px 6px;
   border-radius: 4px;
 }
 
 @media (prefers-color-scheme: dark) {
   .highlight {
-    background-color: rgba(96, 165, 250, 0.25);
+    background-color: rgba(56, 189, 248, 0.2);
   }
 }
 
@@ -46,8 +63,9 @@ body, h1, h2, h3, p {
 
 /* Set a background color and font */
 body {
-  font-family: Arial, sans-serif;
+  font-family: var(--font-body);
   background-color: var(--background-color);
+  line-height: 1.6;
 }
 
 /* Header styles */
@@ -69,8 +87,9 @@ header h3 {
 }
 
 h3 {
-  font-size: 11pt;
-
+  font-family: var(--font-heading);
+  font-size: 13pt;
+  font-weight: 600;
 }
 
 .container h3 {
@@ -81,6 +100,34 @@ h3 {
 header img.logo {
   max-width: 320px;
   margin-bottom: 10px;
+}
+
+/* CTA Button */
+.cta-button {
+  display: inline-block;
+  background-color: var(--cta-color);
+  color: #FFFFFF;
+  padding: 12px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  transition: background-color 0.2s ease-out, transform 0.2s ease-out;
+  margin-top: 16px;
+}
+
+.cta-button:hover {
+  background-color: #0284C7;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .cta-button:hover {
+    background-color: #0EA5E9;
+  }
 }
 
 .profile-photo {
@@ -96,7 +143,30 @@ header img.logo {
 .container {
   max-width: 700px;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 30px 20px;
+}
+
+/* Section cards */
+.section-card {
+  background-color: var(--highlight-background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.section-card h3 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.section-card ul {
+  margin-bottom: 0;
+}
+
+.section-card p:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .intro {
@@ -126,7 +196,15 @@ header img.logo {
   margin-top: 30px;
   padding: 20px;
   background-color: var(--highlight-background-color);
+  border: 1px solid var(--border-color);
   border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+@media (prefers-color-scheme: dark) {
+  .andbible-section {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
 }
 
 .andbible-logo {
