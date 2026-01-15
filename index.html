@@ -23,7 +23,7 @@
   <meta property="og:url" content="https://sykero.fi">
   <meta property="og:type" content="website">
 
-  <link rel="stylesheet" href="styles.css?v=20260115m"/>
+  <link rel="stylesheet" href="styles.css?v=20260115u"/>
 </head>
 <body>
 <header>
@@ -58,46 +58,96 @@
     <li>Deep technical expertise backed by years of experience</li>
   </ul>
 
-  <h3>Featured Work</h3>
-  <div class="featured-work-header">
-    <a href="https://andbible.org/"><img src="ablogo.svg" alt="AndBible" class="featured-logo"/></a>
-    <span class="featured-stats">500k+ downloads</span>
-  </div>
+  <h3>Featured Work & Testimonials</h3>
+  <div class="case-carousel" id="case-carousel">
+    <div class="case-study" id="case-1">
+      <div class="case-header">
+        <a href="https://andbible.org/"><img src="ablogo.svg" alt="AndBible" class="featured-logo"/></a>
+        <span class="featured-stats">900k+ downloads</span>
+      </div>
+      <h4>Cross-Device Sync</h4>
+      <p><strong>Challenge:</strong> Users needed to sync bookmarks, notes, and workspaces across multiple devices.</p>
+      <p><strong>Solution:</strong> Delta-based cloud sync with pluggable storage backends (Google Drive, NextCloud). Only changed data is transferred, minimizing bandwidth and sync time.</p>
+      <p><strong>Result:</strong> Thousands of daily users syncing seamlessly across devices.</p>
+      <blockquote class="case-testimonial">
+        <span class="stars">★★★★★</span>
+        "The best Bible app that I've used thus far... I also love the features and the design of the application, how everything is easily accessible to me and the smooth synchronisation."
+        <cite>— Google Play Review</cite>
+      </blockquote>
+    </div>
 
-  <div class="case-study">
-    <h4>Cross-Device Sync</h4>
-    <p><strong>Challenge:</strong> Users needed to sync bookmarks, notes, and workspaces across multiple devices.</p>
-    <p><strong>Solution:</strong> Delta-based cloud sync with pluggable storage backends (Google Drive, NextCloud). Only changed data is transferred, minimizing bandwidth and sync time.</p>
-    <p><strong>Result:</strong> Thousands of daily users syncing seamlessly across devices.</p>
-    <blockquote class="case-testimonial">
-      <span class="stars">★★★★★</span>
-      "The best Bible app that I've used thus far... I also love the features and the design of the application, how everything is easily accessible to me and the smooth synchronisation."
-      <cite>— Google Play Review</cite>
-    </blockquote>
-  </div>
+    <div class="case-study" id="case-2">
+      <div class="case-header">
+        <a href="https://andbible.org/"><img src="ablogo.svg" alt="AndBible" class="featured-logo"/></a>
+        <span class="featured-stats">900k+ downloads</span>
+      </div>
+      <h4>Bookmarks & Highlights</h4>
+      <p><strong>Challenge:</strong> Users needed a rich annotation system: highlights in different colors, notes, and organization by topic. Traditional apps only support whole-verse highlighting.</p>
+      <p><strong>Solution:</strong> Character-level precision for text selection, overlapping highlights with CSS/SVG layers, label system for categorization, and StudyPad for collecting notes into documents.</p>
+      <p><strong>Result:</strong> Flexible annotation system that scales to thousands of bookmarks with search, export, and cross-device sync.</p>
+      <blockquote class="case-testimonial">
+        <span class="stars">★★★★★</span>
+        "Really appreciate the app... the ability to have personalized bookmarks and make personal notes. I also like the ability to backup the bookmarks and notes."
+        <cite>— Google Play Review</cite>
+      </blockquote>
+    </div>
 
-  <div class="case-study">
-    <h4>Bookmarks & Highlights</h4>
-    <p><strong>Challenge:</strong> Users needed a rich annotation system: highlights in different colors, notes, and organization by topic. Traditional apps only support whole-verse highlighting.</p>
-    <p><strong>Solution:</strong> Character-level precision for text selection, overlapping highlights with CSS/SVG layers, label system for categorization, and StudyPad for collecting notes into documents.</p>
-    <p><strong>Result:</strong> Flexible annotation system that scales to thousands of bookmarks with search, export, and cross-device sync.</p>
-    <blockquote class="case-testimonial">
-      <span class="stars">★★★★★</span>
-      "Really appreciate the app... the ability to have personalized bookmarks and make personal notes. I also like the ability to backup the bookmarks and notes."
-      <cite>— Google Play Review</cite>
-    </blockquote>
-  </div>
+    <div class="case-study" id="case-3">
+      <div class="case-header">
+        <a href="https://andbible.org/"><img src="ablogo.svg" alt="AndBible" class="featured-logo"/></a>
+        <span class="featured-stats">900k+ downloads</span>
+      </div>
+      <h4>EPUB Support</h4>
+      <p><strong>Challenge:</strong> Users wanted to read EPUB books alongside Bible texts, but the existing architecture only supported specific formats.</p>
+      <p><strong>Solution:</strong> Adapter pattern integration into the existing architecture. EPUB files appear as native objects—no changes needed to upper layers. Performance optimized via fragmentation, compression, and SQLite indexing.</p>
+      <p><strong>Result:</strong> Seamless format support with full-text search. Same architecture now powers MySword and MyBible formats too.</p>
+      <blockquote class="case-testimonial">
+        <span class="stars">★★★★★</span>
+        "Being able to add my own epubs and the scripture references auto hyperlink is wonderful!"
+        <cite>— Google Play Review</cite>
+      </blockquote>
+    </div>
 
-  <div class="case-study">
-    <h4>EPUB Support</h4>
-    <p><strong>Challenge:</strong> Users wanted to read EPUB books alongside Bible texts, but the existing architecture only supported specific formats.</p>
-    <p><strong>Solution:</strong> Adapter pattern integration into the existing architecture. EPUB files appear as native objects—no changes needed to upper layers. Performance optimized via fragmentation, compression, and SQLite indexing.</p>
-    <p><strong>Result:</strong> Seamless format support with full-text search. Same architecture now powers MySword and MyBible formats too.</p>
-    <blockquote class="case-testimonial">
-      <span class="stars">★★★★★</span>
-      "Being able to add my own epubs and the scripture references auto hyperlink is wonderful!"
-      <cite>— Google Play Review</cite>
-    </blockquote>
+    <div class="case-study" id="case-4">
+      <div class="case-header">
+        <a href="https://andbible.org/"><img src="ablogo.svg" alt="AndBible" class="featured-logo"/></a>
+        <span class="featured-stats">900k+ downloads</span>
+      </div>
+      <h4>Workspaces</h4>
+      <p><strong>Challenge:</strong> Users needed to manage multiple study environments—for daily reading, deep analysis, and different contexts.</p>
+      <p><strong>Solution:</strong> Workspaces feature: unlimited environments with their own windows, settings, and reading positions. Quick context switching with swipe gestures, drag-and-drop arrangement.</p>
+      <p><strong>Result:</strong> Modern workspace concept for mobile Bible study. Users can customize environments for different needs.</p>
+      <blockquote class="case-testimonial">
+        <span class="stars">★★★★★</span>
+        "Love the app, all the features are amazing. I love that you can hide highlights in different workspaces, so hard to find that feature!"
+        <cite>— Google Play Review</cite>
+      </blockquote>
+    </div>
+
+    <div class="case-study" id="case-5">
+      <div class="case-header">
+        <a href="https://andbible.org/"><img src="ablogo.svg" alt="AndBible" class="featured-logo"/></a>
+        <span class="featured-stats">900k+ downloads</span>
+      </div>
+      <h4>Vue.js Rendering Engine</h4>
+      <p><strong>Challenge:</strong> Complex XML data (OSIS, TEI formats) needed flexible rendering in a mobile app. Traditional solutions required heavy parsing or static template mappings.</p>
+      <p><strong>Solution:</strong> Vue.js rendering system that transforms XML directly into Vue components dynamically. Modular architecture: each OSIS/TEI element is an independent component.</p>
+      <p><strong>Result:</strong> Hundreds of thousands of users. Adding new features is straightforward—XML structure defines the UI.</p>
+      <blockquote class="case-testimonial">
+        <span class="stars">★★★★★</span>
+        "Hands down, my favourite! Easy, quick, no loading... great customization, a single tap to open or close other documents."
+        <cite>— Google Play Review</cite>
+      </blockquote>
+    </div>
+  </div>
+  <div class="carousel-pagination">
+    <button class="pagination-arrow" id="prev-btn" title="Previous">&#8249;</button>
+    <button class="pagination-btn active" data-index="0" title="Cross-Device Sync">1</button>
+    <button class="pagination-btn" data-index="1" title="Bookmarks & Highlights">2</button>
+    <button class="pagination-btn" data-index="2" title="EPUB Support">3</button>
+    <button class="pagination-btn" data-index="3" title="Workspaces">4</button>
+    <button class="pagination-btn" data-index="4" title="Vue.js Rendering Engine">5</button>
+    <button class="pagination-arrow" id="next-btn" title="Next">&#8250;</button>
   </div>
 
   <h3>Technologies</h3>
@@ -133,5 +183,51 @@
     <div class="footer-legal">Tuomas Airaksinen Software Oy (<a href="https://tietopalvelu.ytj.fi/yritys/3592153-9">3592153-9</a>)</div>
   </div>
 </footer>
+<script>
+(function() {
+  const carousel = document.getElementById('case-carousel');
+  const buttons = document.querySelectorAll('.pagination-btn');
+  const cases = carousel.querySelectorAll('.case-study');
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
+  let currentIndex = 0;
+
+  function goTo(index) {
+    // Wrap around for cyclic navigation
+    if (index < 0) index = cases.length - 1;
+    if (index >= cases.length) index = 0;
+    currentIndex = index;
+    cases[index].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+    updateButtons();
+  }
+
+  function updateButtons() {
+    buttons.forEach((btn, i) => {
+      btn.classList.toggle('active', i === currentIndex);
+    });
+  }
+
+  // Click handler for pagination buttons
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      goTo(parseInt(btn.dataset.index));
+    });
+  });
+
+  // Arrow buttons
+  prevBtn.addEventListener('click', () => goTo(currentIndex - 1));
+  nextBtn.addEventListener('click', () => goTo(currentIndex + 1));
+
+  // Update active button on scroll
+  carousel.addEventListener('scroll', () => {
+    const scrollLeft = carousel.scrollLeft;
+    const cardWidth = cases[0].offsetWidth + 16;
+    currentIndex = Math.round(scrollLeft / cardWidth);
+    updateButtons();
+  });
+
+  updateButtons();
+})();
+</script>
 </body>
 </html>

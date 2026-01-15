@@ -244,24 +244,98 @@ header img.logo {
   }
 }
 
-/* Featured Work header */
-.featured-work-header {
+/* Case study header */
+.case-header {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 16px;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 4px;
 }
 
 .featured-logo {
-  height: 28px;
+  height: 24px;
   width: auto;
 }
 
 .featured-stats {
   font-family: var(--font-heading);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   color: var(--text-muted);
+}
+
+/* Case Study carousel */
+.case-carousel {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  margin-top: 12px;
+}
+
+.case-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.pagination-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+  background: var(--background-color);
+  color: var(--text-muted);
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pagination-btn:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.pagination-btn.active {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: white;
+}
+
+.pagination-arrow {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+  background: var(--background-color);
+  color: var(--text-muted);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pagination-arrow:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.pagination-arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
 }
 
 /* Case Study cards */
@@ -270,7 +344,9 @@ header img.logo {
   border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 20px 24px;
-  margin-bottom: 16px;
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  box-sizing: border-box;
 }
 
 .case-study h4 {
