@@ -452,6 +452,16 @@ footer {
   margin-right: auto;
 }
 
+.footer-brand {
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+.footer-legal {
+  font-family: var(--font-body);
+  margin-top: 4px;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   header img.logo {
