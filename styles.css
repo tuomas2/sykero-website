@@ -244,33 +244,107 @@ header img.logo {
   }
 }
 
-/* AndBible section */
-.andbible-section {
+/* Featured Work header */
+.featured-work-header {
   display: flex;
   align-items: center;
-  gap: 32px;
-  margin-top: 30px;
-  padding: 20px;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.featured-logo {
+  height: 28px;
+  width: auto;
+}
+
+.featured-stats {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+/* Case Study cards */
+.case-study {
   background-color: var(--highlight-background-color);
   border: 1px solid var(--border-color);
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  padding: 20px 24px;
+  margin-bottom: 16px;
 }
 
-@media (prefers-color-scheme: dark) {
-  .andbible-section {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  }
+.case-study h4 {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--highlight-text-color);
+  margin: 0 0 12px 0;
+  padding: 0;
 }
 
-.andbible-logo {
-  width: 45px;
-  height: 45px;
+.case-study p {
+  margin: 0;
+  padding: 4px 0;
+  font-size: 14px;
 }
 
-.andbible-section h3 {
-  margin-top: 0;
-  padding-top: 0;
+.case-study p:last-of-type {
+  padding-bottom: 0;
+}
+
+.case-testimonial {
+  margin: 16px 0 0 0;
+  padding: 12px 16px;
+  background-color: var(--background-color);
+  border-left: 3px solid var(--accent-color);
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.case-testimonial cite {
+  display: block;
+  margin-top: 6px;
+  font-style: normal;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.case-testimonial .stars {
+  display: block;
+  color: #F59E0B;
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+
+/* Testimonials */
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.testimonial {
+  background-color: var(--highlight-background-color);
+  border: 1px solid var(--border-color);
+  border-left: 3px solid var(--accent-color);
+  border-radius: 0 12px 12px 0;
+  padding: 16px 20px;
+  margin: 0;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.testimonial cite {
+  display: block;
+  margin-top: 8px;
+  font-style: normal;
+  font-size: 12px;
+  color: var(--text-muted);
 }
 
 /* Footer styles */
@@ -342,6 +416,29 @@ footer {
 .social-link svg {
   width: 20px;
   height: 20px;
+}
+
+.footer-andbible {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
+
+.footer-andbible-logo {
+  height: 18px;
+  width: auto;
+}
+
+.footer-andbible a {
+  color: var(--text-muted);
+}
+
+.footer-andbible a:hover {
+  color: var(--highlight-text-color);
 }
 
 .footer-text {
