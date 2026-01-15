@@ -80,8 +80,16 @@ header h1 {
   color: var(--highlight-text-color);
 }
 
+header .tagline {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--text-muted);
+  margin: 0;
+  padding: 0;
+}
+
 header h3 {
-  padding-top: 0;
+  padding-top: 8px;
   margin-top: 0;
   color: var(--highlight-text-color);
 }
@@ -189,6 +197,50 @@ header img.logo {
     width: 80px;
     height: 80px;
     flex-shrink: 0;
+  }
+}
+
+/* Stats row */
+.stats-row {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin: 24px 0;
+  padding: 20px;
+  background-color: var(--highlight-background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+}
+
+.stat-item {
+  text-align: center;
+  font-family: var(--font-heading);
+  color: var(--text-muted);
+}
+
+.stat-item strong {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--highlight-text-color);
+  line-height: 1.2;
+}
+
+.stats-note {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: -16px;
+  padding-top: 0;
+}
+
+@media (max-width: 768px) {
+  .stats-row {
+    gap: 24px;
+    padding: 16px;
+  }
+  .stat-item strong {
+    font-size: 24px;
   }
 }
 
