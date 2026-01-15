@@ -234,6 +234,14 @@ header img.logo {
   padding-top: 0;
 }
 
+.availability-note {
+  font-size: 14px;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: 8px;
+  padding-top: 0;
+}
+
 @media (max-width: 768px) {
   .stats-row {
     gap: 24px;
