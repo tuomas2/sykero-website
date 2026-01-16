@@ -13,20 +13,6 @@
   color: var(--text-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-color: #0F172A;
-    --highlight-background-color: #1E293B;
-    --text-color: #F1F5F9;
-    --text-muted: #94A3B8;
-    --highlight-text-color: #38BDF8;
-    --accent-color: #38BDF8;
-    --cta-color: #0EA5E9;
-    --border-color: #334155;
-    --link-color: #7DD3FC;
-  }
-}
-
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -42,14 +28,8 @@
   border-radius: 4px;
 }
 
-@media (prefers-color-scheme: dark) {
-  .highlight {
-    background-color: rgba(56, 189, 248, 0.2);
-  }
-}
-
 a {
-  color: var(--link-color, var(--accent-color));
+  color: var(--accent-color);
 }
 
 a:hover {
@@ -130,12 +110,6 @@ header img.logo {
   background-color: #0284C7;
   color: #FFFFFF;
   transform: translateY(-2px);
-}
-
-@media (prefers-color-scheme: dark) {
-  .cta-button:hover {
-    background-color: #0EA5E9;
-  }
 }
 
 .profile-photo {
