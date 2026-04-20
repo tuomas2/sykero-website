@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VLRV8C41C3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VLRV8C41C3');
+  </script>
+  <meta name="description" content="MIDI Recorder — record BLE or USB MIDI keyboards directly to Standard MIDI File (.mid) format on Android. Built by Sykerö Software.">
+
+  <title>MIDI Recorder — Sykerö Software</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="MIDI Recorder — Sykerö Software">
+  <meta property="og:description" content="Record BLE or USB MIDI keyboards directly to Standard MIDI File (.mid) on Android. Plays recordings back through the same device.">
+  <meta property="og:image" content="https://sykero.fi/midirecorder-icon.png">
+  <meta property="og:url" content="https://sykero.fi/midirecorder.html">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="styles.css?v=20260115u"/>
+  <style>
+    .project-hero {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-top: 20px;
+      padding: 24px;
+      background-color: var(--highlight-background-color);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+    }
+    .project-hero-icon {
+      width: 96px;
+      height: 96px;
+      border-radius: 20px;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .project-hero-text h1 {
+      font-family: var(--font-heading);
+      font-size: 22pt;
+      font-weight: 700;
+      color: var(--highlight-text-color);
+      margin: 0;
+      padding: 0 0 4px 0;
+      line-height: 1.15;
+    }
+    .project-hero-text .tagline {
+      font-size: 15px;
+      color: var(--text-muted);
+      margin: 0;
+      padding: 0 0 12px 0;
+    }
+    .feature-list {
+      padding-left: 20px;
+    }
+    .feature-list li {
+      padding: 4px 0;
+    }
+    .breadcrumb {
+      font-size: 13px;
+      color: var(--text-muted);
+      padding: 16px 0 0 0;
+    }
+    .breadcrumb a {
+      text-decoration: none;
+    }
+    @media (max-width: 600px) {
+      .project-hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+      }
+      .project-hero-icon {
+        width: 80px;
+        height: 80px;
+      }
+      .project-hero-text h1 {
+        font-size: 18pt;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <a href="index.html"><img src="sykerologo4.png" alt="Sykerö Software logo" class="logo"/></a>
+  <h3>Inventive solutions for your projects</h3>
+</header>
+<div class="container">
+  <p class="breadcrumb"><a href="index.html">&larr; Sykerö Software</a></p>
+
+  <div class="project-hero">
+    <img src="midirecorder-icon.png" alt="MIDI Recorder app icon" class="project-hero-icon"/>
+    <div class="project-hero-text">
+      <h1>MIDI Recorder</h1>
+      <p class="tagline">Record BLE or USB MIDI keyboards to <code>.mid</code> files on Android. Play them back too.</p>
+      <a href="https://play.google.com/store/apps/details?id=fi.sykero.midirecorder" class="cta-button">Get it on Google Play</a>
+    </div>
+  </div>
+
+  <h3>Overview</h3>
+  <p>Records MIDI keyboards over Bluetooth (BLE MIDI) or USB directly to Standard MIDI Files (<code>.mid</code>), and plays recordings back through the same device. Built by a developer and musician as a focused tool.</p>
+
+  <h3>Features</h3>
+  <ul class="feature-list">
+    <li>Records to standard MIDI (<code>.mid</code>) file — opens in any DAW, sequencer, or notation app</li>
+    <li>Works with Bluetooth MIDI (BLE) and USB MIDI devices</li>
+    <li>Smart start: recording waits for your first note, so files have no empty lead-in</li>
+    <li>Auto-record with silence-based auto-stop</li>
+    <li>Built-in metronome with optional count-in</li>
+    <li>Plays recordings back through the same device</li>
+    <li>Home-screen widget and background service — start a take without opening the app</li>
+    <li>Auto-reconnects to your keyboard when it powers on</li>
+    <li>You choose the output folder; recordings live in your own storage</li>
+    <li>Mark your favorite recordings</li>
+  </ul>
+
+  <h3>Requirements</h3>
+  <ul class="feature-list">
+    <li>Android 12 or newer</li>
+    <li>A BLE (Bluetooth Low Energy) MIDI device or a USB MIDI device (most modern digital keyboards)</li>
+  </ul>
+
+  <h3>Why it exists</h3>
+  <p>Most DAW apps assume a full studio setup and charge accordingly. MIDI Recorder does one thing well: it captures what you play on a connected keyboard, starts at the first note so the file has no dead air, and writes the result as a plain <code>.mid</code> file you can open in any music software. No accounts, no cloud lock-in, no surprise limits.</p>
+
+  <p style="margin-top: 24px;"><a href="https://play.google.com/store/apps/details?id=fi.sykero.midirecorder" class="cta-button">Get it on Google Play</a></p>
+
+  <p style="margin-top: 24px; font-size: 13px; color: var(--text-muted);"><a href="midirecorder/privacy.html">Privacy policy</a></p>
+</div>
+<footer>
+  <div class="footer-contact">
+    <p class="footer-location"><span class="flag">&#127467;&#127470;</span> Based in Finland, working globally</p>
+  </div>
+  <div class="social-links">
+    <a href="mailto:tuomas@sykero.fi" title="Email" class="social-link">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+      </svg>
+    </a>
+    <a href="https://www.linkedin.com/in/tuomasairaksinen/" title="LinkedIn" class="social-link">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+      </svg>
+    </a>
+    <a href="https://github.com/tuomas2" title="GitHub" class="social-link">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+      </svg>
+    </a>
+  </div>
+  <div class="footer-text">
+    <div class="footer-brand">&copy; 2026 Sykerö Software</div>
+    <div class="footer-legal">Tuomas Airaksinen Software Oy (<a href="https://tietopalvelu.ytj.fi/yritys/3592153-9">3592153-9</a>)</div>
+  </div>
+</footer>
+</body>
+</html>

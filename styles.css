@@ -226,6 +226,91 @@ header img.logo {
   }
 }
 
+/* Projects grid (high-level project list with homepage + Play links) */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.project-card {
+  background-color: var(--highlight-background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-card-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.project-card-logo {
+  height: 40px;
+  width: auto;
+  flex-shrink: 0;
+}
+
+.project-card-logo.project-card-logo-icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.project-card h4 {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--highlight-text-color);
+  margin: 0;
+  padding: 0 0 2px 0;
+}
+
+.project-card-desc {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.project-card-links {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.project-card-links a {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  background-color: var(--background-color);
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.project-card-links a:hover {
+  background-color: var(--accent-color);
+  color: #FFFFFF;
+  border-color: var(--accent-color);
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Case study header */
 .case-header {
   display: flex;
