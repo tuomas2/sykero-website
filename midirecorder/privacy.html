@@ -110,7 +110,7 @@
   <p class="breadcrumb"><a href="../midirecorder.html">&larr; MIDI Recorder</a></p>
 
   <h3>MIDI Recorder — Privacy Policy</h3>
-  <p class="last-updated">Last updated: 2026-04-20</p>
+  <p class="last-updated">Last updated: 2026-04-21</p>
 
   <div class="privacy-summary">
     <strong>Summary:</strong> MIDI Recorder is an offline app. It does not collect, transmit, or share any personal data. The app does not hold the Android <code>INTERNET</code> permission, which means it technically cannot send any data off your device.
@@ -133,12 +133,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><code>BLUETOOTH</code>, <code>BLUETOOTH_ADMIN</code>, <code>BLUETOOTH_CONNECT</code>, <code>BLUETOOTH_SCAN</code></td>
-        <td>Required to discover and connect to BLE (Bluetooth Low Energy) MIDI keyboards.</td>
-      </tr>
-      <tr>
-        <td><code>ACCESS_FINE_LOCATION</code>, <code>ACCESS_COARSE_LOCATION</code></td>
-        <td>Android requires a location permission as a prerequisite for BLE scanning. The app <strong>does not read your location</strong> and does not use GPS.</td>
+        <td><code>BLUETOOTH_CONNECT</code>, <code>BLUETOOTH_SCAN</code></td>
+        <td>Required to discover and connect to BLE (Bluetooth Low Energy) MIDI keyboards. <code>BLUETOOTH_SCAN</code> is declared with the <code>neverForLocation</code> flag, so the app <strong>does not request any location permission</strong> and does not derive your physical location from Bluetooth scan results.</td>
       </tr>
       <tr>
         <td><code>FOREGROUND_SERVICE</code>, <code>WAKE_LOCK</code>, <code>POST_NOTIFICATIONS</code></td>
