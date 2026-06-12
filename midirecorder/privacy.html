@@ -110,10 +110,10 @@
   <p class="breadcrumb"><a href="../midirecorder.html">&larr; MIDI Recorder</a></p>
 
   <h3>MIDI Recorder — Privacy Policy</h3>
-  <p class="last-updated">Last updated: 2026-04-21</p>
+  <p class="last-updated">Last updated: 2026-06-12</p>
 
   <div class="privacy-summary">
-    <strong>Summary:</strong> MIDI Recorder is an offline app. It does not collect, transmit, or share any personal data. The app does not hold the Android <code>INTERNET</code> permission, which means it technically cannot send any data off your device.
+    <strong>Summary:</strong> MIDI Recorder is an offline app. It does not collect any personal data, and it does not hold the Android <code>INTERNET</code> permission &mdash; so it cannot send anything to the internet or to us. The only data that ever leaves the app is through the <strong>optional Pebble smartwatch integration</strong>: if you turn it on, the app shares your recording status with the Pebble companion app on your phone, which relays it over Bluetooth to your own watch (see below). Nothing is ever sent to a server.
   </div>
 
   <h3>What the app stores on your device</h3>
@@ -124,6 +124,15 @@
     <li><strong>Paired device info</strong> &mdash; the Bluetooth / USB identity of keyboards you have connected, so the app can auto-reconnect. Kept locally only.</li>
     <li><strong>In-app purchase state</strong> (see below) &mdash; a single flag indicating whether the "Full Version" unlock has been purchased. No payment details are stored.</li>
   </ul>
+
+  <h3>Pebble smartwatch integration (optional)</h3>
+  <p>MIDI Recorder can optionally connect to a Pebble smartwatch so you can start and stop recording from your wrist and see the current status at a glance. This feature is <strong>off by default</strong> and is only active once you enable it.</p>
+  <p>When it is enabled, the app shares the following with the <a href="https://repebble.com">Core Devices</a> Pebble companion app installed on your phone, which relays it over Bluetooth to your paired watch:</p>
+  <ul>
+    <li>whether a recording is currently in progress, and how long it has been running;</li>
+    <li>the name of the connected MIDI / Bluetooth device, and how many devices are connected.</li>
+  </ul>
+  <p>This information travels only between your phone and your own watch. MIDI Recorder does not transmit it to any server &mdash; the app has no internet access. The Pebble companion app is a separate product with its own privacy policy. The integration relies on the Bluetooth and companion-device permissions already listed below; it requires no new permissions.</p>
 
   <h3>Permissions and why the app asks for them</h3>
   <p>Every permission is used strictly for the feature it belongs to. The app does not use any of them for advertising, analytics, or profiling.</p>
