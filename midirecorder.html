@@ -12,7 +12,7 @@
     gtag('js', new Date());
     gtag('config', 'G-VLRV8C41C3');
   </script>
-  <meta name="description" content="MIDI Recorder for Android — capture every improvisation from your BLE or USB MIDI keyboard to a Standard MIDI File (.mid). Built by Sykerö Software.">
+  <meta name="description" content="MIDI Recorder for Android and iOS — capture every improvisation from your BLE or USB MIDI keyboard to a Standard MIDI File (.mid). Built by Sykerö Software.">
 
   <title>MIDI Recorder — Sykerö Software</title>
 
@@ -27,7 +27,7 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="MIDI Recorder — Sykerö Software">
-  <meta property="og:description" content="Capture every improvisation. Records BLE or USB MIDI keyboards to Standard MIDI File (.mid) on Android, and plays them back through the same device.">
+  <meta property="og:description" content="Capture every improvisation. Records BLE or USB MIDI keyboards to Standard MIDI File (.mid) on Android and iOS, and plays them back through the same device.">
   <meta property="og:image" content="https://sykero.fi/midirecorder-icon.png">
   <meta property="og:url" content="https://sykero.fi/midirecorder.html">
   <meta property="og:type" content="website">
@@ -66,11 +66,34 @@
       margin: 0;
       padding: 0 0 12px 0;
     }
+    .store-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .store-buttons .cta-button {
+      margin-top: 0;
+    }
     .feature-list {
       padding-left: 20px;
     }
     .feature-list li {
       padding: 4px 0;
+    }
+    .platform-note {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      color: var(--highlight-text-color);
+      background-color: rgba(3, 105, 161, 0.12);
+      border-radius: 999px;
+      padding: 1px 8px;
+      margin-left: 6px;
+      white-space: nowrap;
+      vertical-align: 1px;
     }
     .breadcrumb {
       font-size: 13px;
@@ -93,6 +116,9 @@
       .project-hero-text h1 {
         font-size: 18pt;
       }
+      .store-buttons {
+        justify-content: center;
+      }
     }
   </style>
 </head>
@@ -108,8 +134,11 @@
     <img src="midirecorder-icon.png" alt="MIDI Recorder app icon" class="project-hero-icon"/>
     <div class="project-hero-text">
       <h1>MIDI Recorder</h1>
-      <p class="tagline">Capture every improvisation. Records BLE or USB MIDI keyboards to <code>.mid</code> files on Android, and plays them back too.</p>
-      <a href="https://play.google.com/store/apps/details?id=fi.sykero.midirecorder" class="cta-button">Get it on Google Play</a>
+      <p class="tagline">Capture every improvisation. Records BLE or USB MIDI keyboards to <code>.mid</code> files on Android and iOS, and plays them back too.</p>
+      <div class="store-buttons">
+        <a href="https://play.google.com/store/apps/details?id=fi.sykero.midirecorder" class="cta-button">Get it on Google Play</a>
+        <a href="https://apps.apple.com/us/app/midi-recorder-bluetooth-piano/id6784191099" class="cta-button">Download on the App Store</a>
+      </div>
     </div>
   </div>
 
@@ -118,22 +147,27 @@
   <p>MIDI Recorder is built so that doesn’t happen anymore. Every improvisation, every spontaneous idea, captured to a standard MIDI file you can open in any DAW.</p>
 
   <h3>Always ready</h3>
-  <p>Leave your keyboard powered off. When you turn it on, the app reconnects automatically. Recording waits for your first note, so files have no empty lead-in. Auto-stop ends the take when you stop playing. You don’t fight the app — you just play, and the take is there.</p>
+  <p>Recording waits for your first note, so files have no empty lead-in. Auto-stop ends the take when you stop playing. You don’t fight the app — you just play, and the take is there.</p>
+  <p>On Android you can even leave your keyboard powered off: when you turn it on, the app reconnects automatically.</p>
   <p>Or turn any of it off: every automation is optional, and the app adapts to your workflow rather than the other way around.</p>
 
   <h3>Features</h3>
   <ul class="feature-list">
     <li>Smart start — recording waits for your first note</li>
     <li>Auto-record with silence-based auto-stop</li>
-    <li>Auto-reconnects to your keyboard when it powers on</li>
     <li>Saves to standard MIDI (<code>.mid</code>) — opens in any DAW, sequencer, or notation app</li>
     <li>Works with Bluetooth MIDI (BLE) and USB MIDI devices</li>
     <li>Start and stop recording with a pedal of your choice (sustain, sostenuto, or soft)</li>
     <li>Built-in metronome with optional count-in</li>
     <li>Plays recordings back through the same device</li>
-    <li>You choose the output folder; recordings live in your own storage</li>
+    <li>Live staff view — the notes you play appear on a musical staff in real time</li>
+    <li>Chord analysis — chord names appear as you play and during playback, in plain (maj7, m, dim) or jazz (Δ, −, °, ø) notation</li>
+    <li>Automatic key detection — recognizes the key of what you’re playing</li>
     <li>Mark your favorite takes</li>
-    <li>Home-screen widget — a mini view of the app on your launcher: see status and start or stop a take without opening the app</li>
+    <li>Auto-reconnects to your keyboard when it powers on<span class="platform-note">Android</span></li>
+    <li>You choose the output folder; recordings live in your own storage<span class="platform-note">Android</span></li>
+    <li>Home-screen widget — a mini view of the app on your launcher: see status and start or stop a take without opening the app<span class="platform-note">Android</span></li>
+    <li>Recordings save to the app’s folder — browse and export them in the Files app<span class="platform-note">iOS</span></li>
   </ul>
 
   <h3>Why I made this</h3>
@@ -142,11 +176,14 @@
 
   <h3>Requirements</h3>
   <ul class="feature-list">
-    <li>Android 12 or newer</li>
+    <li>Android 12 or newer, or iOS 16 or newer</li>
     <li>A BLE (Bluetooth Low Energy) MIDI device or a USB MIDI device (most modern digital keyboards)</li>
   </ul>
 
-  <p style="margin-top: 24px;"><a href="https://play.google.com/store/apps/details?id=fi.sykero.midirecorder" class="cta-button">Get it on Google Play</a></p>
+  <div class="store-buttons" style="margin-top: 24px;">
+    <a href="https://play.google.com/store/apps/details?id=fi.sykero.midirecorder" class="cta-button">Get it on Google Play</a>
+    <a href="https://apps.apple.com/us/app/midi-recorder-bluetooth-piano/id6784191099" class="cta-button">Download on the App Store</a>
+  </div>
 
   <p style="margin-top: 24px; font-size: 13px; color: var(--text-muted);"><a href="midirecorder/privacy.html">Privacy policy</a></p>
 </div>
