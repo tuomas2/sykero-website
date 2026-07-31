@@ -12,7 +12,7 @@
     gtag('js', new Date());
     gtag('config', 'G-VLRV8C41C3');
   </script>
-  <meta name="description" content="Privacy policy for the MIDI Recorder Android app by Sykerö Software. The app is offline and collects no personal data.">
+  <meta name="description" content="Privacy policy for the MIDI Recorder app for Android and iOS by Sykerö Software. The app is offline and collects no personal data.">
 
   <title>MIDI Recorder — Privacy Policy</title>
 
@@ -110,23 +110,25 @@
   <p class="breadcrumb"><a href="../midirecorder.html">&larr; MIDI Recorder</a></p>
 
   <h3>MIDI Recorder — Privacy Policy</h3>
-  <p class="last-updated">Last updated: 2026-06-12</p>
+  <p class="last-updated">Last updated: 2026-07-31</p>
+
+  <p>This policy covers the MIDI Recorder app on <strong>both Android and iOS</strong>. The two apps share the same code and behave the same way; where a platform differs, it is called out below.</p>
 
   <div class="privacy-summary">
-    <strong>Summary:</strong> MIDI Recorder is an offline app. It does not collect any personal data, and it does not hold the Android <code>INTERNET</code> permission &mdash; so it cannot send anything to the internet or to us. The only data that ever leaves the app is through the <strong>optional Pebble smartwatch integration</strong>: if you turn it on, the app shares your recording status with the Pebble companion app on your phone, which relays it over Bluetooth to your own watch (see below). Nothing is ever sent to a server.
+    <strong>Summary:</strong> MIDI Recorder is an offline app. It does not collect any personal data, and it contains no networking code at all &mdash; there is no server behind it, and nothing is ever sent to us. On Android it additionally does not hold the <code>INTERNET</code> permission, so it is technically incapable of reaching the network. The only data that ever leaves the app is through the <strong>optional Pebble smartwatch integration</strong> (Android only): if you turn it on, the app shares your recording status with the Pebble companion app on your phone, which relays it over Bluetooth to your own watch (see below).
   </div>
 
   <h3>What the app stores on your device</h3>
   <p>Everything the app keeps lives on your device and is removed when you uninstall it. Specifically:</p>
   <ul>
-    <li><strong>Your MIDI recordings</strong> (<code>.mid</code> files) &mdash; saved into a folder you choose through the system file picker. The app only reads and writes inside that folder.</li>
-    <li><strong>Your settings</strong> (tempo, metronome options, auto-connect preferences, etc.) &mdash; stored in the app's private SharedPreferences.</li>
-    <li><strong>Paired device info</strong> &mdash; the Bluetooth / USB identity of keyboards you have connected, so the app can auto-reconnect. Kept locally only.</li>
+    <li><strong>Your MIDI recordings</strong> (<code>.mid</code> files) &mdash; on Android, saved into a folder you choose through the system file picker; the app only reads and writes inside that folder. On iOS, saved into the app's own Documents folder, which you can browse and export from the Files app.</li>
+    <li><strong>Your settings</strong> (tempo, metronome options, auto-connect preferences, etc.) &mdash; stored in the app's private settings storage (SharedPreferences on Android, <code>NSUserDefaults</code> on iOS).</li>
+    <li><strong>Paired device info</strong> &mdash; the Bluetooth / USB identity of keyboards you have connected, so the app can reconnect to them automatically. Kept locally only.</li>
     <li><strong>In-app purchase state</strong> (see below) &mdash; a single flag indicating whether the "Full Version" unlock has been purchased. No payment details are stored.</li>
   </ul>
 
-  <h3>Pebble smartwatch integration (optional)</h3>
-  <p>MIDI Recorder can optionally connect to a Pebble smartwatch so you can start and stop recording from your wrist and see the current status at a glance. This feature is <strong>off by default</strong> and is only active once you enable it.</p>
+  <h3>Pebble smartwatch integration (optional, Android only)</h3>
+  <p>MIDI Recorder can optionally connect to a Pebble smartwatch so you can start and stop recording from your wrist and see the current status at a glance. This feature is <strong>off by default</strong> and is only active once you enable it. It exists on <strong>Android only</strong> &mdash; the iOS app has no Pebble integration and shares nothing with any other app.</p>
   <p>When it is enabled, the app shares the following with the <a href="https://repebble.com">Core Devices</a> Pebble companion app installed on your phone, which relays it over Bluetooth to your paired watch:</p>
   <ul>
     <li>whether a recording is currently in progress, and how long it has been running;</li>
@@ -136,6 +138,7 @@
 
   <h3>Permissions and why the app asks for them</h3>
   <p>Every permission is used strictly for the feature it belongs to. The app does not use any of them for advertising, analytics, or profiling.</p>
+  <p><strong>On Android:</strong></p>
   <table class="permission-table">
     <thead>
       <tr><th>Permission</th><th>Purpose</th></tr>
@@ -155,12 +158,13 @@
       </tr>
     </tbody>
   </table>
+  <p><strong>On iOS</strong> the app asks for one permission: <strong>Bluetooth</strong> (<code>NSBluetoothAlwaysUsageDescription</code>), used to find and connect your BLE MIDI keyboard. It also declares the <code>bluetooth-central</code> background mode so recording keeps running while the screen is locked. It does <strong>not</strong> ask for location, notifications, microphone, contacts, or access to your photos.</p>
 
-  <h3>Google Play Billing</h3>
-  <p>The app offers a one-time in-app purchase ("Full Version" unlock). The transaction is handled by Google Play under <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>; the app never sees your payment details and only stores a local flag that the purchase exists. No other third-party SDKs are used — no analytics, no crash reporting, no ads.</p>
+  <h3>In-app purchase</h3>
+  <p>The app offers a one-time in-app purchase ("Full Version" unlock). The transaction is handled by the platform's own store &mdash; Google Play Billing on Android (under <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>) and Apple StoreKit on iOS (under <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>). In both cases the app never sees your payment details and only stores a local flag that the purchase exists; there is no server-side receipt check, because there is no server. No other third-party SDKs are used — no analytics, no crash reporting, no ads.</p>
 
   <h3>Changes to this policy</h3>
-  <p>If this policy changes, the updated version will appear on this page, and the "Last updated" date at the top will reflect the change. Material changes will also be noted in the app's release notes on Google Play.</p>
+  <p>If this policy changes, the updated version will appear on this page, and the "Last updated" date at the top will reflect the change. Material changes will also be noted in the app's release notes on Google Play and the App Store.</p>
 
   <h3>Contact</h3>
   <p>Questions about this policy? Email <a href="mailto:midirecord.support@sykero.fi">midirecord.support@sykero.fi</a>.</p>
