@@ -95,6 +95,20 @@
         <a href="https://apps.apple.com/us/app/midi-recorder-bluetooth-piano/id6784191099">App Store</a>
       </div>
     </div>
+    <div class="project-card">
+      <div class="project-card-head">
+        <img src="jailbee-mark.png" alt="JailBee" class="project-card-logo project-card-logo-icon"/>
+        <div>
+          <h4>JailBee</h4>
+          <p class="project-card-desc">Per-branch development containers for Linux. Every git branch gets its own services, Docker daemon and IDE &mdash; and a sandboxed home for coding agents. Open source, GPLv3.</p>
+        </div>
+      </div>
+      <div class="project-card-links">
+        <a href="https://jailbee.gisgro.io/">Homepage</a>
+        <a href="https://github.com/VRTFinland/jailbee">GitHub</a>
+        <a href="https://pypi.org/project/jailbee/">PyPI</a>
+      </div>
+    </div>
   </div>
 
   <h3>Featured Work & Testimonials</h3>
@@ -189,6 +203,17 @@
       <p><strong>Solution:</strong> A Kotlin Multiplatform core shared by both apps, with BLE timestamp-based tick computation (not wall-clock), silence-based auto-stop, first-note smart start, pedal-triggered start/stop, metronome, a live staff view with real-time chord analysis, and a home-screen mini view of the app on the launcher.</p>
       <p><strong>Result:</strong> A focused utility that plays nicely with any DAW — no accounts, no cloud lock-in, and every feature is free. Shipping on Google Play and the App Store. <a href="midirecorder.html">Read more &rarr;</a></p>
     </div>
+
+    <div class="case-study" id="case-7">
+      <div class="case-header">
+        <a href="https://jailbee.gisgro.io/"><img src="jailbee-mark.png" alt="JailBee" class="featured-logo"/></a>
+        <span class="featured-stats">Open source &middot; GPLv3</span>
+      </div>
+      <h4>JailBee &mdash; One container per branch</h4>
+      <p><strong>Challenge:</strong> Working on several branches at once collapses into port conflicts, shared database state and twenty-minute branch switches. At the same time, AI coding agents need a real sandbox rather than trust: their reach into the machine and the network has to be bounded, or you cannot leave one working on its own.</p>
+      <p><strong>Solution:</strong> Every branch gets its own Incus system container, cloned copy-on-write from a single golden image &mdash; its own services, its own Docker daemon, its own IDE and browser through Wayland passthrough. A git bridge moves commits straight between host and container, submodules included, a kernel-level egress allowlist bounds what the container can reach, and one dashboard covers every project.</p>
+      <p><strong>Result:</strong> Several full stacks running in parallel on a single host, a new container up in about a minute, and coding agents left to work unattended behind a strict allowlist. Designed and built by me at GISGRO Oy, released as open source under GPLv3 and installable from PyPI. <a href="https://jailbee.gisgro.io/">jailbee.gisgro.io &rarr;</a></p>
+    </div>
   </div>
   <div class="carousel-pagination">
     <button class="pagination-arrow" id="prev-btn" title="Previous">&#8249;</button>
@@ -198,11 +223,12 @@
     <button class="pagination-btn" data-index="3" title="Workspaces">4</button>
     <button class="pagination-btn" data-index="4" title="Vue.js Rendering Engine">5</button>
     <button class="pagination-btn" data-index="5" title="MIDI Recorder">6</button>
+    <button class="pagination-btn" data-index="6" title="JailBee">7</button>
     <button class="pagination-arrow" id="next-btn" title="Next">&#8250;</button>
   </div>
 
   <h3>Technologies</h3>
-  <p>Full-stack: Vue.js, TypeScript, Kotlin/Java, Python. Native Android specialist. SQL databases (MySQL, SQLite).</p>
+  <p>Full-stack: Vue.js, TypeScript, Kotlin/Java, Python. Native Android specialist. SQL databases (MySQL, SQLite). Linux, containers (Incus, Docker) and developer tooling.</p>
 
   <h3>Pricing</h3>
   <p>90 € / hour. Project scope is estimated upfront and a total price is provided with the offer.</p>
